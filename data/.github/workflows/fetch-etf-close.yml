@@ -1,0 +1,52 @@
+name: Fetch ETF Close Prices
+
+on:
+  # 미국 동부 기준 평일 16:30 (UTC 21:30 EST / 20:30 EDT)
+  # 정규장 마감(16:00 ET) 후 30분 여유를 두고 실행
+  schedule:
+    - cron: '30 21 * * 1-5'  # 동계(EST) 기준
+    - cron: '30 20 * * 1-5'  # 하계(EDT) 기준 — 중복 실행되지만 멱등성 보장
+  # 수동 실행 (GitHub Actions 탭에서 직접 트리거 가능)
+  workflow_dispatch:
+    inputs:
+      force_date:
+        description: '강제 날짜 (YYYY-MM-DD, 비우면 오늘)'
+        required: false
+        default: ''
+
+jobs:
+  fetch-and-commit:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write   # data/etf-data.json 커밋에 필요
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install yfinance requests
+
+      - name: Fetch ETF close prices
+        env:
+          FORCE_DATE: ${{ github.event.inputs.force_date }}
+        run: python scripts/fetch_etf.py
+
+      - name: Check if data changed
+        id: diff
+        run: |
+          git diff --quiet data/etf-data.json && echo "changed=false" >> $GITHUB_OUTPUT || echo "changed=true" >> $GITHUB_OUTPUT
+
+      - name: Commit and push if changed
+        if: steps.diff.outputs.changed == 'true'
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/etf-data.json
+          git commit -m "chore: update ETF close prices $(date -u +'%Y-%m-%d %H:%M UTC')"
+          git push
