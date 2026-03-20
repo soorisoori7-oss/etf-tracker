@@ -1,19 +1,19 @@
 {
-  "fetched_at": "2026-03-20T13:40:20Z",
+  "fetched_at": "2026-03-20T21:49:18Z",
   "ref_date": "2026-03-20",
   "partial": false,
   "errors": [],
   "prices": {
     "ETHU": {
-      "close": 23.34,
+      "close": 23.41,
       "date": "2026-03-20"
     },
     "BITX": {
-      "close": 15.85,
+      "close": 15.92,
       "date": "2026-03-20"
     },
     "SOLT": {
-      "close": 53.06,
+      "close": 53.46,
       "date": "2026-03-20"
     }
   }
