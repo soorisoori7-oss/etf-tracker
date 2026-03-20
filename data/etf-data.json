@@ -1,11 +1,20 @@
 {
-  "fetched_at": "1970-01-01T00:00:00Z",
-  "ref_date": null,
+  "fetched_at": "2026-03-20T13:40:20Z",
+  "ref_date": "2026-03-20",
   "partial": false,
   "errors": [],
   "prices": {
-    "ETHU": null,
-    "BITX": null,
-    "SOLT": null
+    "ETHU": {
+      "close": 23.34,
+      "date": "2026-03-20"
+    },
+    "BITX": {
+      "close": 15.85,
+      "date": "2026-03-20"
+    },
+    "SOLT": {
+      "close": 53.06,
+      "date": "2026-03-20"
+    }
   }
 }
