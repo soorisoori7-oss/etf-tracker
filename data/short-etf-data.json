@@ -1,0 +1,12 @@
+{
+  "fetched_at": "2026-03-23T00:00:00Z",
+  "ref_date": "2026-03-20",
+  "partial": false,
+  "errors": [],
+  "prices": {
+    "BITI": { "close": 숫자, "date": "2026-03-20" },
+    "ETHD": { "close": 숫자, "date": "2026-03-20" },
+    "SOLI": { "close": 숫자, "date": "2026-03-20" },
+    "MSTZ": { "close": 숫자, "date": "2026-03-20" }
+  }
+}
