@@ -22,6 +22,7 @@ TICKERS = {
     "ETHU": "ethereum",
     "BITX": "bitcoin",
     "SOLT": "solana",
+    "MSTU": "bitcoin",   # MicroStrategy 2× — MSTR 주가 기반, BTC 상관관계 활용
 }
 
 NY_TZ   = timezone(timedelta(hours=-5))   # EST (하계엔 -4이지만 종가 날짜 판단용으로 근사치 사용)
