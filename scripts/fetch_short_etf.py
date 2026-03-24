@@ -21,7 +21,6 @@ import yfinance as yf
 TICKERS = {
     "BITI": "bitcoin",    # ProShares Short Bitcoin ETF (BTC 인버스)
     "ETHD": "ethereum",   # ProShares UltraShort Ether ETF (ETH 인버스)
-    "SOLI": "solana",     # Direxion Daily SOLANA Bear 1X ETF (SOL 인버스)
     "MSTZ": "bitcoin",    # T-Rex 2X Inverse MSTR Daily Target ETF (MSTR 인버스, BTC 상관관계 활용)
 }
 
