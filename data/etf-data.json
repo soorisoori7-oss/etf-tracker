@@ -6,19 +6,23 @@
   "prices": {
     "ETHU": {
       "close": 21.65,
-      "date": "2026-04-02"
+      "date": "2026-04-02",
+      "coin_close": 2064.00
     },
     "BITX": {
       "close": 14.39,
-      "date": "2026-04-02"
+      "date": "2026-04-02",
+      "coin_close": 84000
     },
     "SOLT": {
       "close": 41.16,
-      "date": "2026-04-02"
+      "date": "2026-04-02",
+      coin_close": 118
     },
     "MSTU": {
       "close": 3.9,
-      "date": "2026-04-02"
+      "date": "2026-04-02",
+      "coin_close": 84000
     }
   }
 }
