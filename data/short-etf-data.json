@@ -1,20 +1,20 @@
 {
-  "fetched_at": "2026-08-05T22:55:07Z",
-  "ref_date": "2026-08-05",
+  "fetched_at": "2026-08-07T01:28:45Z",
+  "ref_date": "2026-08-06",
   "partial": false,
   "errors": [],
   "prices": {
     "BITI": {
-      "close": 23.57,
-      "date": "2026-08-05"
+      "close": 23.78,
+      "date": "2026-08-06"
     },
     "ETHD": {
-      "close": 56.75,
-      "date": "2026-08-05"
+      "close": 57.04,
+      "date": "2026-08-06"
     },
     "MSTZ": {
-      "close": 10.73,
-      "date": "2026-08-05"
+      "close": 10.98,
+      "date": "2026-08-06"
     }
   }
 }
